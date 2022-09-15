@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--sport.admin inherit tree view -->
+    <record id="sport_admin_view_tree_inherit" model="ir.ui.view">
+        <field name="name">sport.admin.inherit.view.tree</field>
+        <field name="model">sport.admin</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="sport_person_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_adm"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- sport.admin inherit form view -->
+    <record id="sport_admin_view_form_inherit" model="ir.ui.view">
+        <field name="name">sport.admin.inherit.view.form</field>
+        <field name="model">sport.admin</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="sport_person_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_adm"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- sport.admin action window -->
+    <record id="sport_admin_action" model="ir.actions.act_window">
+        <field name="name">sport.admin.action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sport.admin</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="sport_admin_menu_act" 
+                name="Admin" 
+                parent="sport_pegawai_menu" 
+                action="sport_admin_action" 
+                sequence="30"/>
+
+</odoo>

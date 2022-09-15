@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sport_olahraga,access.sport.olahraga,model_sport_olahraga,,1,1,1,1
+access_sport_produk,access.sport.produk,model_sport_produk,,1,1,1,1
+access_sport_kategoriproduk,access.sport.kategoriproduk,model_sport_kategoriproduk,,1,1,1,1
+access_sport_supplier,access.sport.supplier,model_sport_supplier,,1,1,1,1
+access_sport_person,access.sport.person,model_sport_person,,1,1,1,1
+access_sport_kasir,access.sport.kasir,model_sport_kasir,,1,1,1,1
+access_sport_admin,access.sport.admin,model_sport_admin,,1,1,1,1
+access_sport_olahraga,access.sport.olahraga,model_sport_olahraga,,1,1,1,1
+access_sport_lokasi,access.sport.lokasi,model_sport_lokasi,,1,1,1,1
+access_sport_penjualan,access.sport.penjualan,model_sport_penjualan,,1,1,1,1
+access_sport_detailpenjualan,access.sport.detailpenjualan,model_sport_detailpenjualan,,1,1,1,1
+access_sport_produkdatang,access.sport.produkdatang,model_sport_produkdatang,,1,1,1,1
+access_sport_member,access.sport.member,model_sport_member,,1,1,1,1

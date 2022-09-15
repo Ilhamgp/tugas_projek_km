@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="sport_root_menu"
+        name="Sport"
+        sequence="10"/>
+    <menuitem
+        id="sport_olahraga_menu"
+        name="Olahraga"
+        parent="sport_root_menu"
+        sequence="5"/>
+     <menuitem 
+        id="sport_produk_menu" 
+        name="Produk" 
+        parent="sport_root_menu" 
+        sequence="20"/>
+    <menuitem id="sport_pegawai_menu" 
+              name="Pegawai" 
+              parent="sport_root_menu" 
+              sequence="30"/>
+    <menuitem id="sport_transaksi_menu" 
+              name="Transaksi" 
+              parent="sport_root_menu" 
+              sequence="35"/>          
+</odoo>

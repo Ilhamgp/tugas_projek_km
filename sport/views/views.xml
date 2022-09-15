@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="sport.list">
+      <field name="name">sport list</field>
+      <field name="model">sport.sport</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="sport.action_window">
+      <field name="name">sport window</field>
+      <field name="res_model">sport.sport</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sport.action_server">
+      <field name="name">sport server</field>
+      <field name="model_id" ref="model_sport_sport"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="sport" id="sport.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="sport.menu_1" parent="sport.menu_root"/>
+    <menuitem name="Menu 2" id="sport.menu_2" parent="sport.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="sport.menu_1_list" parent="sport.menu_1"
+              action="sport.action_window"/>
+    <menuitem name="Server to list" id="sport" parent="sport.menu_2"
+              action="sport.action_server"/>
+-->
+  </data>
+</odoo>

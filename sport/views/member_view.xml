@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sport_member_view_tree" model="ir.ui.view">
+        <field name="name">sport.member.view.tree</field>
+        <field name="model">sport.member</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="nomem" />
+                <field name="waktu" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="sport_member_view_form" model="ir.ui.view">
+        <field name="name">sport.member.view.form</field>
+        <field name="model">sport.member</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                    <field name="name" />
+                    <field name="nomem" />
+                    <field name="waktu" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sport_member_action" model="ir.actions.act_window">
+        <field name="name">Lokasi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sport.member</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="sport_member_menu"
+        name="member"
+        action="sport_member_action"
+        parent="sport_olahraga_menu"
+        sequence="40"/>
+</odoo>

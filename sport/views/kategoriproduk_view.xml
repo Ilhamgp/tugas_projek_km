@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+    <record id="sport_kategoriproduk_view_tree" model="ir.ui.view">
+        <field name="name">sport.kategoriproduk.view.tree</field>
+        <field name="model">sport.kategoriproduk</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="kode_kelompok"/>
+                <field name="kode_rak"/>
+                <!-- <field name="jml_item"/> -->
+                <field name="daftar"/>
+            </tree>
+        </field>
+    </record>
+
+   
+    <record id="sport_kategoriproduk_view_form" model="ir.ui.view">
+        <field name="name">sport.kategoriproduk.view.form</field>
+        <field name="model">sport.kategoriproduk</field>
+        <field name="arch" type="xml">
+            <form string="Kelompok Produk">
+                <sheet>
+                    <group name="kelompok" string="Letak Kelompok">
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                        <!-- <field name="jml_item"/> -->
+                    </group>
+                    <group name="rak" string="Letak Produk">
+                        <field name="kode_rak"/>  
+                        <field name="produk_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    
+    <record id="sport_kategoriproduk_action" model="ir.actions.act_window">
+        <field name="name">Kategori Produk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sport.kategoriproduk</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    
+    <menuitem id="sport_kategoriproduk_menu_act" 
+              name="Kategori Produk" 
+              parent="sport_produk_menu"
+              action="sport_kategoriproduk_action" 
+              sequence="20"/>
+
+</odoo>

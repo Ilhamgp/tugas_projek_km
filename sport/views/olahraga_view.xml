@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sport_view_tree" model="ir.ui.view">
+        <field name="name">sport.view.tree</field>
+        <field name="model">sport.olahraga</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="namaolahraga"/>
+                <field name="name"/>
+                <field name="usia"/>
+                <field name="resikobahaya"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sport_view_form" model="ir.ui.view">
+        <field name="name">sport.view.form</field>
+        <field name="model">sport.olahraga</field>
+        <field name="arch" type="xml">
+            <form string="Olahraga">
+                <sheet>
+                    <group name="Olahraga" string="Jenis Olahraga">
+                        <field name="namaolahraga"/>
+                        <field name="name"/>
+                        <field name="usia"/>  
+                        <field name="resikobahaya"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sport_action" model="ir.actions.act_window">
+        <field name="name">Jenis Olahraga</field>
+        <field name="res_model">sport.olahraga</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="sport_name_menu"
+        name="jenis olahraga"
+        action="sport_action"
+        parent="sport_olahraga_menu"
+        sequence="5"/>
+
+</odoo>
